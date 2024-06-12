@@ -12,7 +12,7 @@ function AppAbout() {
       <Container fluid>
         <div className="title-holder">
           <h2>About Us</h2>
-          <div className="subtitle">learn more about Fam Life</div>
+          <div className="subtitle">Learn more about The Podcast</div>
         </div>
         <Row>
           <Col sm={6}>
@@ -27,15 +27,6 @@ function AppAbout() {
             <p>The podcast has also contributed to the growth and development of the South African entertainment industry by providing a space for artists to discuss their work and connect with audiences.
               These metrics will indicate that the L-Tido podcast has a strong following and is well-received by its audience. The podcast's ability to engage viewers and generate revenue makes it a promising platform for future episodes and potential sponsorships.</p>
             <div className='progress-block'>
-              <h4>Music Production</h4>
-              
-            </div>
-            <div className='progress-block'>
-              <h4>Graphics</h4>
-              
-            </div>
-            <div className='progress-block'>
-              <h4>And More</h4>
             </div>
           </Col>
         </Row>

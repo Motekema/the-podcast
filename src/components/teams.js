@@ -10,9 +10,9 @@ const teamsData = [
     fbLink: 'https://www.facebook.com',
     twitterLink: 'https://www.twitter.com',
     linkedinLink: 'https://www.linkedin.com',
-    name: 'Fam Life GANG',
-    designation: 'FLE',
-    description: 'TEAM.'
+    name: 'L-Tido',
+    designation: 'Host',
+    description: 'TEAM'
   }
 ]
 
@@ -21,8 +21,8 @@ function AppTeams() {
     <section id="teams" className="block teams-block">
       <Container fluid>
         <div className="title-holder">
-          <h2>Fam Life GVNG</h2>
-          <div className="subtitle">The TEAM</div>
+          <h2>The L-Tido Podcast</h2>
+          <div className="subtitle">Meet The TEAM</div>
         </div>
         <Row>
           {

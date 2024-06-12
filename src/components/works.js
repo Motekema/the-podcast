@@ -64,8 +64,8 @@ function AppWorks() {
     <section id="works" className="block works-block">
       <Container fluid>
         <div className="title-holder">
-          <h2>Music Released</h2>
-          <div className="subtitle">stream below</div>
+          <h2>Episodes</h2>
+          <div className="subtitle">Watch Below</div>
         </div>
         <Row className='portfoliolist'>
           {
