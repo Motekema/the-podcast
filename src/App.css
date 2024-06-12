@@ -383,7 +383,7 @@ textarea {
   right: 0;
   top: 0;
   z-index: 9999;
-  background: #fff;
+  background: #fd3cd9;
   box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.1);
   transition: all 0.5s linear;
 }
@@ -395,7 +395,7 @@ textarea {
 }
 
 #header .navbar-brand {
-  color: #f64b4b;
+  color: #ffffff;
   text-transform: uppercase;
   font-weight: 600;
   height: auto;
@@ -418,7 +418,7 @@ textarea {
 }
 
 #header .navbar-collapse a {
-  color: #4d4d4d;
+  color: #ffffff;
   position: relative;
 }
 

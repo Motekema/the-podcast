@@ -4,22 +4,22 @@ var heroData = [
   {
     id: 1,
     image: require('../assets/images/img-hero1.jpg'),
-    title: 'All About Fam Life Entertainment',
-    description: 'All you need to know about fam life entertainment',
+    title: 'Prince Kaybee',
+    description: 'Watch Below',
     link: 'https://www.facebook.com/FAMLIFEMUSIC'
   },
   {
     id: 2,
     image: require('../assets/images/img-hero2.jpg'),
-    title: 'Our Clothing Brand SICK',
-    description: 'It is not yet out, Still in Progres',
+    title: 'CAssper Nyovest',
+    description: 'Watch Below',
     link: 'https://www.facebook.com/FAMLIFEMUSIC'
   },
   {
     id: 3,
     image: require('../assets/images/img-hero3.jpg'),
-    title: 'Follow Us For More',
-    description: 'Follow us on every social platform',
+    title: 'Mawhoo',
+    description: 'Watch Below',
     link: 'https://www.facebook.com/FAMLIFEMUSIC'
   }
 ]
@@ -40,7 +40,7 @@ function AppHero() {
                   <Carousel.Caption>
                     <h2>{hero.title}</h2>
                     <p>{hero.description}</p>
-                    <a className="btn btn-primary" href={hero.link}>Learn More <i className="fas fa-chevron-right"></i></a>
+                    <a className="btn btn-primary" href={hero.link}>Watch<i className="fas fa-chevron-right"></i></a>
                   </Carousel.Caption>             
                 </Carousel.Item>
               );
