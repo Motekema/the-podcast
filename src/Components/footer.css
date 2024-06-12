@@ -1,0 +1,70 @@
+.footerContact {
+  background-color: #ff69b4; /* pink */
+  padding: 40px 0;
+  color: #fff;
+}
+
+.footerContact h1 {
+  font-size: 40px;
+}
+
+footer {
+  background-color: #4169e1; /* blue */
+  padding: 50px 0;
+  color: #fff;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 6fr 2fr 2fr 1fr;
+  grid-gap: 20px;
+}
+
+.footer img {
+  width: 150px;
+}
+
+.footer h2 {
+  font-weight: 500;
+}
+
+.footer p {
+  color: #000; /* black */
+  margin: 20px 0;
+}
+
+.footer input {
+  background-color: #fff;
+  padding: 17px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.footer h3 {
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  color: #000; /* black */
+  margin-bottom: 20px;
+}
+
+.legal {
+  text-align: center;
+  padding: 20px;
+  background: #fff; /* white */
+  color: #000; /* black */
+  border-top: 1px solid rgba(0, 0, 0, 0.1); /* black */
+}
+
+@media screen and (max-width: 800px) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

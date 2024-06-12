@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Footer from './Components/Footer'; // Import the Footer component
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <h1>Welcome to The Podcast App</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Explore, listen, and enjoy your favorite podcasts.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <main className="App-main">
+        {/* Add your podcast list component here */}
+        {/* <PodcastList /> */}
+      </main>
+      <Footer /> {/* Integrate the Footer component here */}
     </div>
   );
 }
