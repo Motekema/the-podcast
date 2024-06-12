@@ -1,0 +1,111 @@
+.podcast-footer {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.subscribe-form {
+  display: flex;
+  margin-top: 10px;
+}
+
+.subscribe-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+.btn-contact,
+.btn-subscribe {
+  flex: 0 0 auto;
+  border-radius: 0 5px 5px 0;
+}
+
+.footer-legal {
+  text-align: center;
+  margin-top: 30px;
+  color: #666;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 5px;
+}
+
+.footer-links a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footer-section {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+  }
+
+  .subscribe-input {
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+
+  .btn-contact,
+  .btn-subscribe {
+    border-radius: 5px;
+  }
+}

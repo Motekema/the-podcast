@@ -1,12 +1,11 @@
 import React from 'react';
 import Footer from './Components/Footer';
+import Navbar from './Components/Navbar'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Welcome to My Podcast App</h1>
-      </header>
+      <Navbar/>
       <Footer />
     </div>
   );
