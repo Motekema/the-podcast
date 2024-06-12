@@ -11,9 +11,9 @@ var heroData = [
   {
     id: 2,
     image: require('../assets/images/img-hero2.jpg'),
-    title: 'CAssper Nyovest',
-    description: 'Watch Below',
-    link: 'https://www.facebook.com/FAMLIFEMUSIC'
+    title: 'Cassper Nyovest',
+    description: 'Episode 8 Cassper Nyovest Raw & Unfiltered , AKA’s Passing, Solomon Composure, AmaPiano Beef',
+    link: 'https://youtu.be/_VVXGn8OwqU?list=PL61WJyfydYs-yB0Y1l77e5N1KoP8AzqjV'
   },
   {
     id: 3,

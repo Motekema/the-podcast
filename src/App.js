@@ -4,7 +4,6 @@ import './App.css';
 import AppHeader from './components/header';
 import AppHero from './components/hero';
 import AppAbout from './components/about';
-import AppServices from './components/services';
 import AppWorks from './components/works';
 import AppTeams from './components/teams';
 import AppContact from './components/contact';
@@ -18,9 +17,8 @@ function App() {
       </header>
       <main>
         <AppHero />
-        <AppAbout />
-        <AppServices />
         <AppWorks />
+        <AppAbout />
         <AppTeams />
         <AppContact />
       </main>

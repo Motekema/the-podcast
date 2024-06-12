@@ -11,10 +11,9 @@ function AppHeader() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#about">About Us</Nav.Link>
             <Nav.Link href="#works">Episodes</Nav.Link>
+            <Nav.Link href="#about">About Us</Nav.Link>
             <Nav.Link href="#teams">Members</Nav.Link>
-            <Nav.Link href="#blog">Blog</Nav.Link>
             <Nav.Link href="#contact">Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>
