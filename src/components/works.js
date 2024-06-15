@@ -90,7 +90,7 @@ function AppWorks() {
             </Col>
           ))}
         </Row>
-        <Pagination className="mt-3">
+        <Pagination className="mt-3 justify-content-center">
           {[...Array(Math.ceil(videosData.length / itemsPerPage)).keys()].map(number => (
             <Pagination.Item
               key={number + 1}
