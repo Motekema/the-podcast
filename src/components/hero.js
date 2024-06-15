@@ -19,8 +19,8 @@ var heroData = [
     id: 3,
     image: require('../assets/images/img-hero3.jpg'),
     title: 'Mawhoo',
-    description: 'Watch Below',
-    link: 'https://www.facebook.com/FAMLIFEMUSIC'
+    description: 'EPISODE 14 MAWHOO, "ALL WOMEN LOVE MONEY", AFFAIR WITH LONDIE LONDON,S EX, BBL, ABSENT FATHER',
+    link: 'https://youtu.be/2B0EdpKzvKQ?list=PL61WJyfydYs-yB0Y1l77e5N1KoP8AzqjV'
   }
 ]
 
