@@ -135,8 +135,8 @@ ul,
 }
 
 .btn.btn-primary {
-  background: #f64b4b;
-  border-color: #f64b4b;
+  background: #ed72ef;
+  border-color: #ed72ef;
   padding: 13px 35px;
   font-size: 14px;
   line-height: 18px;
@@ -149,7 +149,7 @@ ul,
 .btn.btn-primary:focus,
 .btn.btn-primary:hover {
   background: #fff;
-  border-color: #f64b4b;
+  border-color: #ed72ef;
   color: #f64b4b;
 }
 
@@ -356,7 +356,7 @@ textarea {
 }
 
 .pagination>li>a:hover {
-  background: #f64b4b;
+  background: #160505;
   color: #fff;
   border-color: #f64b4b;
 }
@@ -383,7 +383,7 @@ textarea {
   right: 0;
   top: 0;
   z-index: 9999;
-  background: #fd3cd9;
+  background: #ed72ef;
   box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.1);
   transition: all 0.5s linear;
 }
@@ -474,7 +474,7 @@ textarea {
 
 .hero-block .carousel-item:before {
   content: '';
-  background: rgba(0, 0, 0, 0.7);
+  background: transparent;
   position: absolute;
   top: 0;
   bottom: 0;

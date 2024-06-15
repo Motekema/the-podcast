@@ -1,0 +1,46 @@
+.custom-navbar {
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+    left: 0;
+  }
+  
+  .custom-navbar .navbar-brand,
+  .custom-navbar .nav-link {
+    color: #fff; /* Adjust the color to ensure visibility over the hero image */
+  }
+  
+  .custom-navbar .navbar-brand:hover,
+  .custom-navbar .nav-link:hover {
+    color: #f64b4b; /* Adjust hover color if needed */
+  }
+  
+  .hero-block {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ensure the hero block covers the full viewport height */
+    background: transparent;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-block .carousel-caption {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero-block:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Optional overlay to improve text visibility */
+    z-index: 0;
+  }
+  
