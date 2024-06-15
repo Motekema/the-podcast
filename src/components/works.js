@@ -2,52 +2,42 @@ import React, { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Image from 'react-bootstrap/Image';
 import Pagination from 'react-bootstrap/Pagination';
+import YouTube from 'react-youtube';
+import '../AppWorks.css'; // Import your custom CSS file for styling
 
 const videoLinks = [
-  'https://youtu.be/N7Iq9FVqlT0',
-  'https://youtu.be/MR1-ITN_EhU?list=PL61WJyfydYs-yB0Y1l77e5N1KoP8AzqjV',
-  'https://youtu.be/klGcauFMkGE?list=PL61WJyfydYs-yB0Y1l77e5N1KoP8AzqjV',
-  'https://youtu.be/FC_cXM04gAI?list=PL61WJyfydYs-yB0Y1l77e5N1KoP8AzqjV',
-  'https://youtu.be/t62YniCFKzo?list=PL61WJyfydYs-yB0Y1l77e5N1KoP8AzqjV',
-  'https://youtu.be/_1G3jv07kVA?list=PL61WJyfydYs-yB0Y1l77e5N1KoP8AzqjV',
-  'https://youtu.be/IXbj8TAz9Us?list=PL61WJyfydYs-yB0Y1l77e5N1KoP8AzqjV',
-  'https://youtu.be/_VVXGn8OwqU?list=PL61WJyfydYs-yB0Y1l77e5N1KoP8AzqjV',
-  'https://youtu.be/7Jib5Ep7UHQ?list=PL61WJyfydYs-yB0Y1l77e5N1KoP8AzqjV',
-  'https://youtu.be/GwIKzozNBQI?list=PL61WJyfydYs-yB0Y1l77e5N1KoP8AzqjV',
-  'https://youtu.be/8plyJwx4LDs?list=PL61WJyfydYs-yB0Y1l77e5N1KoP8AzqjV',
-  'https://www.youtube.com/watch?v=wqGZ_OoLzDY&list=PL61WJyfydYs-yB0Y1l77e5N1KoP8AzqjV&index=12&pp=iAQB',
-  'https://youtu.be/xMJDjTUWaP4?list=PL61WJyfydYs-yB0Y1l77e5N1KoP8AzqjV',
-  'https://youtu.be/2B0EdpKzvKQ?list=PL61WJyfydYs-yB0Y1l77e5N1KoP8AzqjV',
-  'https://youtu.be/2o_K9HmBCDI?list=PL61WJyfydYs-yB0Y1l77e5N1KoP8AzqjV',
-  'https://youtu.be/5DDvWeAgpIo?list=PL61WJyfydYs-yB0Y1l77e5N1KoP8AzqjV',
-  'https://youtu.be/9MNrfoBe8Kk?list=PL61WJyfydYs-yB0Y1l77e5N1KoP8AzqjV'
+  'N7Iq9FVqlT0',
+  'MR1-ITN_EhU',
+  'klGcauFMkGE',
+  'FC_cXM04gAI',
+  't62YniCFKzo',
+  '_1G3jv07kVA',
+  'IXbj8TAz9Us',
+  '_VVXGn8OwqU',
+  '7Jib5Ep7UHQ',
+  'GwIKzozNBQI',
+  '8plyJwx4LDs',
+  'wqGZ_OoLzDY',
+  'xMJDjTUWaP4',
+  '2B0EdpKzvKQ',
+  '2o_K9HmBCDI',
+  '5DDvWeAgpIo',
+  '9MNrfoBe8Kk'
 ];
 
 const itemsPerPage = 6; // Number of videos to show per page
 
-function extractVideoId(url) {
-  // Regular expression to extract video ID from YouTube URL
-  const regExp = /^(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/;
-  const match = url.match(regExp);
-  return match && match[1];
-}
-
-const videosData = videoLinks.map((link, index) => ({
-  id: extractVideoId(link),
-  title: `Video ${index + 1}`
-}));
-
 function AppWorks() {
   const [currentPage, setCurrentPage] = useState(1);
   const [videosToShow, setVideosToShow] = useState([]);
+  const [playingVideo, setPlayingVideo] = useState(null);
 
   useEffect(() => {
     // Calculate which videos to display on the current page
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-    const currentVideos = videosData.slice(indexOfFirstItem, indexOfLastItem);
+    const currentVideos = videoLinks.slice(indexOfFirstItem, indexOfLastItem);
 
     // Set videos to display
     setVideosToShow(currentVideos);
@@ -55,6 +45,19 @@ function AppWorks() {
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
+    setPlayingVideo(null); // Reset playing video when changing pages
+  };
+
+  const playVideo = (videoId) => {
+    setPlayingVideo(videoId);
+  };
+
+  const opts = {
+    height: '315',
+    width: '100%',
+    playerVars: {
+      autoplay: 0,
+    },
   };
 
   return (
@@ -65,33 +68,18 @@ function AppWorks() {
           <div className="subtitle">Watch Below</div>
         </div>
         <Row className="videolist">
-          {videosToShow.map(video => (
-            <Col key={video.id} sm={4} className="video-item mb-4">
-              <div className="video-wrapper">
-                <a
-                  href={`https://www.youtube.com/watch?v=${video.id}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    src={`https://img.youtube.com/vi/${video.id}/mqdefault.jpg`}
-                    alt={video.title}
-                    fluid
-                    className="video-thumbnail"
-                  />
-                  <div className="overlay">
-                    <i className="fa fa-play-circle"></i>
-                  </div>
-                </a>
-                <div className="label text-center">
-                  <h3>{video.title}</h3>
+          {videosToShow.map((videoId, index) => (
+            <Col key={index} sm={4} className="video-item mb-4">
+              <div className={`video-wrapper ${playingVideo === videoId ? 'video-playing' : ''}`}>
+                <div className="video-overlay" onClick={() => playVideo(videoId)}>
+                  <YouTube videoId={videoId} opts={opts} />
                 </div>
               </div>
             </Col>
           ))}
         </Row>
         <Pagination className="mt-3 justify-content-center">
-          {[...Array(Math.ceil(videosData.length / itemsPerPage)).keys()].map(number => (
+          {[...Array(Math.ceil(videoLinks.length / itemsPerPage)).keys()].map((number) => (
             <Pagination.Item
               key={number + 1}
               active={number + 1 === currentPage}
