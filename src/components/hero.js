@@ -5,8 +5,8 @@ var heroData = [
     id: 1,
     image: require('../assets/images/img-hero1.jpg'),
     title: 'Prince Kaybee',
-    description: 'Watch Below',
-    link: 'https://www.facebook.com/FAMLIFEMUSIC'
+    description: 'EPISODE 17 PRINCE KAYBEE ON BEING HOMELESS, BEEF WITH DJ MAPHORISA, BLACK COFFEE, CASSPER',
+    link: 'https://youtu.be/9MNrfoBe8Kk?list=PL61WJyfydYs-yB0Y1l77e5N1KoP8AzqjV'
   },
   {
     id: 2,
