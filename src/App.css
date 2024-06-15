@@ -313,9 +313,9 @@ textarea {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #f64b4b;
+  background: #bc23c1;
   border-radius: 3px;
-  color: #fff;
+  color: #ef1d1d;
   border: 0;
 }
 
@@ -326,7 +326,7 @@ textarea {
   -webkit-transform: rotate(-45deg);
   content: '';
   border-style: solid;
-  border-color: #fff;
+  border-color: #000000;
   border-width: 1px 1px 0 0;
   position: absolute;
   top: 50%;
@@ -335,7 +335,7 @@ textarea {
 }
 
 .go-top:hover {
-  background: #f41a1a;
+  background: #ffffff;
 }
 
 .pagination>li.active a {
@@ -449,7 +449,7 @@ textarea {
 }
 
 #footer {
-  background: #f64b4b;
+  background: #860888;
   padding: 50px 0;
   color: #fff;
   text-align: center;
@@ -661,7 +661,7 @@ textarea {
   transition: all 0.3s linear;
   -webkit-transition: all 0.2s linear;
   vertical-align: middle;
-  background: rgba(246, 75, 75, 0.9);
+  background: rgba(182, 5, 159, 0.9);
   opacity: 0;
 }
 
@@ -745,166 +745,6 @@ textarea {
   background: #f64b4b;
 }
 
-.pricing-block .row {
-  align-items: center;
-  margin: 0;
-}
-
-.pricing-block .row>div {
-  text-align: center;
-  padding: 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.pricing-block .heading {
-  background: #e6e6e6;
-  padding: 15px 60px;
-}
-
-.pricing-block .content .list-group-item {
-  padding: 10px 20px;
-  border: 0;
-  background: #f7f7f7;
-}
-
-.pricing-block .content .list-group-item:nth-child(2n-1) {
-  background: #ededed;
-}
-
-.pricing-block .btn-holder {
-  padding: 30px 20px;
-}
-
-.pricing-block div[class*="col"]:nth-child(2) {
-  box-shadow: 0 0 40px 5px #e0e0e0;
-  position: relative;
-}
-
-.pricing-block div[class*="col"]:nth-child(2) .heading {
-  padding: 30px 20px;
-  background: #f64b4b;
-  color: #fff;
-}
-
-.pricing-block div[class*="col"]:nth-child(2):before {
-  content: 'Popular';
-  text-transform: uppercase;
-  position: absolute;
-  top: 40px;
-  left: 40px;
-  background: #f76363;
-  color: #fff;
-  padding: 5px 10px;
-  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
-  -webkit-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
-  font-size: 12px;
-  text-transform: uppercase;
-  width: 150px;
-}
-
-.pricing-block h3 {
-  text-transform: uppercase;
-  margin: 0;
-}
-
-.pricing-block .price {
-  font-size: 35px;
-  line-height: 45px;
-}
-
-.blog-block {
-  background: #f2f2f2;
-}
-
-.blog-block.content-block .holder:hover {
-  box-shadow: none;
-}
-
-.blog-block.content-block .holder:hover .image img {
-  transform: none;
-}
-
-.blog-block.content-block .comment-block ul {
-  margin: 0;
-}
-
-.blog-block.content-block .comment-block li {
-  padding: 0;
-}
-
-.blog-block.content-block .comment-block li:before {
-  display: none;
-}
-
-.blog-block .row {
-  margin-bottom: 50px;
-}
-
-.blog-block .row:last-child {
-  margin-bottom: 0;
-}
-
-.blog-block .holder {
-  background: #fff;
-  padding: 15px;
-  transition: box-shadow 0.3s linear;
-}
-
-.blog-block .holder:hover {
-  box-shadow: 0 0 30px 0 #d9d9d9;
-}
-
-.blog-block .card {
-  border: 0;
-}
-
-.blog-block .card-body {
-  padding: 0;
-}
-
-.blog-block img {
-  margin: 0 0 15px;
-}
-
-.blog-block time {
-  display: block;
-  margin: 0 0 10px;
-}
-
-.blog-block .card-title {
-  margin: 0 0 10px;
-  color: #f64b4b;
-  font-size: 22px;
-}
-
-.blog-block .card-title a:hover {
-  color: #d10a0a;
-}
-
-.blog-block .meta {
-  overflow: hidden;
-  margin: 0 0 10px;
-}
-
-.blog-block .meta time {
-  float: left;
-  padding: 0 10px 0 0;
-}
-
-.blog-block .meta .category {
-  float: right;
-  padding: 0 0 0 10px;
-}
-
-.blog-block .meta .category a {
-  color: #333;
-}
-
-.blog-block .meta .category a:hover {
-  color: #f64b4b;
-}
-
 .contact-block {
   position: relative;
 }
@@ -949,7 +789,7 @@ textarea {
   display: block;
   font-size: 40px;
   margin: 0 0 15px;
-  color: #f64b4b;
+  color: #c52f7f;
 }
 
 @media only screen and (min-width: 1025px) {
