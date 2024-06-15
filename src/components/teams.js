@@ -34,9 +34,9 @@ function AppTeams() {
                     <div className='overlay'>
                       <div className='socials'>
                         <ul>
-                          <li><a href={teams.fbLink}><i className="fab fa-facebook-f"></i></a></li>
-                          <li><a href={teams.twitterLink}><i className="fab fa-twitter"></i></a></li>
-                          <li><a href={teams.linkedinLink}><i className="fab fa-linkedin-in"></i></a></li>
+                          <li><a href="https://www.facebook.com/LTidoMusic/"><i className="fab fa-facebook-f"></i></a></li>
+                          <li><a href="https://x.com/l_tido?lang=en"><i className="fab fa-twitter"></i></a></li>
+                          <li><a href="https://www.instagram.com/l_tido/?hl=en"><i className="fab fa-instagram"></i></a></li>
                         </ul>
                       </div>
                     </div>
