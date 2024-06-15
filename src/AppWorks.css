@@ -12,8 +12,7 @@
   
   .video-playing {
     z-index: 2; /* Ensure playing video is on top */
-    transform: scale(1.2); /* Increase size of playing video */
-    transition: transform 0.3s ease;
+    filter: brightness(80%); /* Apply a brightness effect to indicate interaction */
   }
   
   .video-wrapper iframe {

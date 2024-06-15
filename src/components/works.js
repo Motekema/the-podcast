@@ -4,7 +4,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Pagination from 'react-bootstrap/Pagination';
 import YouTube from 'react-youtube';
-import '../AppWorks.css'; // Import your custom CSS file for styling
+import Modal from 'react-modal';
+import '../AppWorks.css';
 
 const videoLinks = [
   'N7Iq9FVqlT0',
@@ -31,7 +32,8 @@ const itemsPerPage = 6; // Number of videos to show per page
 function AppWorks() {
   const [currentPage, setCurrentPage] = useState(1);
   const [videosToShow, setVideosToShow] = useState([]);
-  const [playingVideo, setPlayingVideo] = useState(null);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [selectedVideo, setSelectedVideo] = useState(null);
 
   useEffect(() => {
     // Calculate which videos to display on the current page
@@ -45,11 +47,17 @@ function AppWorks() {
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
-    setPlayingVideo(null); // Reset playing video when changing pages
+    setSelectedVideo(null); // Close modal when changing pages
   };
 
-  const playVideo = (videoId) => {
-    setPlayingVideo(videoId);
+  const openModal = (videoId) => {
+    setSelectedVideo(videoId);
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+    setSelectedVideo(null);
   };
 
   const opts = {
@@ -64,14 +72,14 @@ function AppWorks() {
     <section id="videos" className="block videos-block">
       <Container fluid>
         <div className="title-holder">
-          <h2>Videos</h2>
+          <h2>EPISODES</h2>
           <div className="subtitle">Watch Below</div>
         </div>
         <Row className="videolist">
           {videosToShow.map((videoId, index) => (
             <Col key={index} sm={4} className="video-item mb-4">
-              <div className={`video-wrapper ${playingVideo === videoId ? 'video-playing' : ''}`}>
-                <div className="video-overlay" onClick={() => playVideo(videoId)}>
+              <div className="video-wrapper">
+                <div className="video-overlay" onClick={() => openModal(videoId)}>
                   <YouTube videoId={videoId} opts={opts} />
                 </div>
               </div>
@@ -90,6 +98,19 @@ function AppWorks() {
           ))}
         </Pagination>
       </Container>
+
+      {/* Modal for displaying the video */}
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        contentLabel="Video Modal"
+        className="video-modal"
+        overlayClassName="video-modal-overlay"
+      >
+        {selectedVideo && (
+          <YouTube videoId={selectedVideo} opts={opts} />
+        )}
+      </Modal>
     </section>
   );
 }
