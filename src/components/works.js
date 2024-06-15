@@ -12,13 +12,11 @@ const videoLinks = [
   'https://youtu.be/FC_cXM04gAI?list=PL61WJyfydYs-yB0Y1l77e5N1KoP8AzqjV',
   'https://youtu.be/t62YniCFKzo?list=PL61WJyfydYs-yB0Y1l77e5N1KoP8AzqjV',
   'https://youtu.be/_1G3jv07kVA?list=PL61WJyfydYs-yB0Y1l77e5N1KoP8AzqjV',
-  // Videos for page 2
   'https://youtu.be/IXbj8TAz9Us?list=PL61WJyfydYs-yB0Y1l77e5N1KoP8AzqjV',
   'https://youtu.be/_VVXGn8OwqU?list=PL61WJyfydYs-yB0Y1l77e5N1KoP8AzqjV',
   'https://youtu.be/7Jib5Ep7UHQ?list=PL61WJyfydYs-yB0Y1l77e5N1KoP8AzqjV',
   'https://youtu.be/GwIKzozNBQI?list=PL61WJyfydYs-yB0Y1l77e5N1KoP8AzqjV',
   'https://youtu.be/8plyJwx4LDs?list=PL61WJyfydYs-yB0Y1l77e5N1KoP8AzqjV',
-  // Videos for page 3
   'https://www.youtube.com/watch?v=wqGZ_OoLzDY&list=PL61WJyfydYs-yB0Y1l77e5N1KoP8AzqjV&index=12&pp=iAQB',
   'https://youtu.be/xMJDjTUWaP4?list=PL61WJyfydYs-yB0Y1l77e5N1KoP8AzqjV',
   'https://youtu.be/2B0EdpKzvKQ?list=PL61WJyfydYs-yB0Y1l77e5N1KoP8AzqjV',
@@ -68,7 +66,7 @@ function AppWorks() {
         </div>
         <Row className="videolist">
           {videosToShow.map(video => (
-            <Col key={video.id} sm={4} className="video-item">
+            <Col key={video.id} sm={4} className="video-item mb-4">
               <div className="video-wrapper">
                 <a
                   href={`https://www.youtube.com/watch?v=${video.id}`}
@@ -76,14 +74,18 @@ function AppWorks() {
                   rel="noopener noreferrer"
                 >
                   <Image
-                    src={`https://img.youtube.com/vi/${video.id}/0.jpg`}
+                    src={`https://img.youtube.com/vi/${video.id}/mqdefault.jpg`}
                     alt={video.title}
                     fluid
+                    className="video-thumbnail"
                   />
-                  <div className="label text-center">
-                    <h3>{video.title}</h3>
+                  <div className="overlay">
+                    <i className="fa fa-play-circle"></i>
                   </div>
                 </a>
+                <div className="label text-center">
+                  <h3>{video.title}</h3>
+                </div>
               </div>
             </Col>
           ))}
