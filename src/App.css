@@ -392,6 +392,7 @@ body {
   color: #fff;
 }
 
+/* Header Styling */
 #header {
   padding: 15px 30px;
   position: fixed;
@@ -506,6 +507,7 @@ body {
   transform: scale(1.1); /* Slight enlargement */
 }
 
+/* Mobile Menu Toggle */
 @media (max-width: 768px) {
   #header .navbar-nav {
     display: none; /* Hidden initially */
@@ -526,6 +528,19 @@ body {
 
   #header .navbar-toggler {
     display: block; /* Visible on smaller screens */
+  }
+
+  /* Toggle Hamburger Icon */
+  #header .navbar-toggler:before {
+    content: '\2630'; /* Hamburger icon */
+    font-size: 24px;
+    color: var(--text-light);
+  }
+
+  /* Adjust Navbar Brand for Mobile */
+  #header .navbar-brand {
+    font-size: 24px;
+    gap: 5px;
   }
 }
 
