@@ -388,8 +388,8 @@ textarea {
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #ffffff, #ffffff); /* Deep gradient for contrast */
-  color: #6e6e6e;
+  background: linear-gradient(135deg, #141e30, #243b55); /* Deep gradient for contrast */
+  color: #fff;
 }
 
 #header {
